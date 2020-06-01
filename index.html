@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Learner Enrollment and Survey Form</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">Learner Enrollment and Survey Form</div>
+    <div id="svg_wrap"></div>
+    
+    <div class="form">
+  <form action="enroll.php" method="POST">
+  	
+    <section>
+    	<div class="info"><p>A. Grade Level & School Info</p></div>
+       <div class="inputfield">
+          <label>A1. School Year</label>
+          <input type="number" name="school_year_1" class="input" placeholder="e.g 2019" >
+       </div>  
+       <div class="inputfield">
+          <label>A1. School Year</label>
+          <input type="number" name="school_year_2" class="input" placeholder="e.g 2020" >
+       </div>  
+       <div class="inputfield">
+          <label>A2. Select in dropdown</label>
+          <div class="custom_select">
+            <select name="lrn_type" >
+              <option value="with_lrn">With LRN</option>
+              <option value="no_lrn">No LRN</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="balik_aral" >
+            <span class="checkmark"></span>
+          </label>
+          <p>A3. Returning (Balik Aral)</p>
+       </div> 
+       <div class="inputfield">
+          <label>A4. Grade Level to Enroll</label>
+          <input type="text" name="grade_to_enroll" class="input" placeholder="e.g Grade 11">
+       </div>  
+       <div class="inputfield">
+          <label>A5. Last Grade Level Completed</label>
+          <input type="text" name="last_grade_level" class="input" placeholder="e.g Grade 10">
+       </div>
+       <div class="inputfield">
+          <label>A6. Last School Year Completed </label>
+          <input type="number" name="last_year_completed" class="input" placeholder="e.g 2019">
+       </div>  
+       <div class="inputfield">
+          <label>A7. Last School Attended </label>
+          <input type="text" name="last_school_attended" class="input" placeholder="e.g PNHS">
+       </div>  
+       <div class="inputfield">
+          <label>A8. School ID </label>
+          <input type="number" name="prev_school_id" class="input" placeholder="e.g 304731">
+       </div>  
+       <div class="inputfield">
+          <label>A9. School Address </label>
+          <input type="text" name="school_address" class="input" placeholder="e.g P-22,Pob,Prosperidad,ADS">
+       </div>  
+       <div class="inputfield">
+          <label>A10. School Type</label>
+          <div class="custom_select">
+            <select name="school_type" >
+              <option value="public_school">Public</option>
+              <option value="private_school">Private</option>
+            </select>
+          </div>
+       </div> 
+              <div class="inputfield">
+          <label>A11. School to Enroll in</label>
+          <input type="text" name="school_to_enroll" class="input" placeholder="e.g PNHS">
+       </div>  
+       <div class="inputfield">
+          <label>A12. School ID </label>
+          <input type="number" name="enroll_school_id" class="input" placeholder="e.g 304731">
+       </div>  
+       <div class="inputfield">
+          <label>A13. School Address </label>
+          <input type="text" name="enroll_school_address" class="input" placeholder="e.g P-22,Pob,Prosperidad,ADS">
+       </div>  
+       <div class="info"><p>A. For Senior High Only</p></div>
+       <div class="inputfield">
+          <label>A14. Semester </label>
+          <input type="text" name="semester" class="input" >
+       </div>  
+       <div class="inputfield">
+          <label>A15. Track </label>
+          <input type="text" name="track" class="input" >
+       </div>  
+       <div class="inputfield">
+          <label>A16. Strand (If any)</label>
+          <input type="text" name="strand" class="input" >
+       </div>  
+    </section>
+   
+    <section>
+    	<div class="info"><p>B. Student Information</p></div>
+       <div class="inputfield">
+          <label>B1. Birth Certificate No. (Optional)</label>
+          <input type="number" name="bcn" class="input" >
+       </div> 
+       <div class="inputfield">
+          <label>B2. Learner Reference Number</label>
+          <input type="number" name="lrn" class="input" placeholder="e.g 131xx..." >
+       </div> 
+       <div class="inputfield">
+          <label>B3. Last Name</label>
+          <input type="text" name="last_name" class="input" placeholder="Last name" >
+       </div>  
+       <div class="inputfield">
+          <label>B4. First Names</label>
+          <input type="text" name="first_name" class="input" placeholder="First name" >
+       </div>  
+       <div class="inputfield">
+          <label>B5. Middle Name (Optional)</label>
+          <input type="text" name="middle_name" class="input" placeholder="Middle name">
+       </div>  
+       <div class="inputfield">
+          <label>B6. Name Extension (Jr,lll)</label>
+          <input type="text" name="middle_name" class="input" placeholder="Middle name">
+       </div>  
+       <div class="inputfield">
+          <label>B7. Birth Date</label>
+          <input type="date" name="birth_date" value="2003-09-12" class="input" placeholder="e.g 2003-09-12" >
+       </div>  
+       <div class="inputfield">
+          <label>B8. Age</label>
+          <input type="number" name="age" class="input" placeholder="Middle name">
+       </div>  
+        <div class="inputfield">
+          <label>B9. Sex</label>
+          <div class="custom_select">
+            <select name="gender_type" >
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+       </div> 
+         <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ip" >
+            <span class="checkmark"></span>
+          </label>
+          <p>B10. Belong to Indigenous People (IP)</p>
+       </div> 
+      <div class="inputfield">
+          <label>B11. Specify (if any)</label>
+          <input type="text" name="ip_specify" class="input">
+       </div> 
+       <div class="inputfield">
+          <label>B12. Mother Tongue</label>
+          <input type="text" name="mother_tongue" class="input">
+       </div> 
+       <div class="inputfield">
+          <label>B13. Religion</label>
+          <input type="text" name="religion" class="input">
+       </div> 
+       <div class="info"><p>B. For Learners with Specia Education Needs</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="special_edu" >
+            <span class="checkmark"></span>
+          </label>
+          <p>B14. Does the learner have special education needs</p>
+       </div> 
+       <div class="inputfield">
+          <label>B15. Specify (if any)</label>
+          <input type="text" name="specify_any_s_edu" class="input" >
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="special_gadget" >
+            <span class="checkmark"></span>
+          </label>
+          <p>B16. Do you have assistive technology available in your home?</p>
+       </div> 
+       <div class="inputfield">
+          <label>B17. Specify (if any)</label>
+          <input type="text" name="specify_any_gadget" class="input" >
+       </div> 
+       <div class="info"><p>B. Address</p></div>
+      <div class="inputfield">
+          <label>B18. Housing Number Street</label>
+          <input type="text" name="hns" class="input" placeholder="e.g P-23" >
+       </div> 
+       <div class="inputfield">
+          <label>B19. Village/Subdivision/Zone</label>
+          <input type="text" name="zone" class="input" >
+       </div> 
+       <div class="inputfield">
+          <label>B20. Barangay</label>
+          <input type="text" name="brg" class="input" placeholder="e.g Poblacion" >
+       </div> 
+       <div class="inputfield">
+          <label>B21. City/Municipality</label>
+          <input type="text" name="city" class="input" placeholder="e.g Prosperidad" >
+       </div> 
+       <div class="inputfield">
+          <label>B22. Province</label>
+          <input type="text" name="province" class="input" placeholder="e.g Agusan Del Sur" >
+       </div> 
+       <div class="inputfield">
+          <label>B23. Region</label>
+          <input type="text" name="region" class="input" placeholder="e.g Caraga 13" >
+       </div>       
+       </section>
+       
+       <section>
+    	<div class="info"><p>C. Parent/Guardian Info</p></div>
+       <div class="inputfield">
+          <label>C1. Father's Name (Last/First/Middle Name)</label>
+          <input type="text" name="father_name" class="input" placeholder="e.g Doe John Berg" >
+       </div>  
+       <div class="inputfield">
+          <label>C2. Highest Educational Affainment</label>
+          <div class="custom_select">
+            <select name="father_school_type" >
+              <option value="1">Elementary Graduate</option>
+              <option value="2">Highschool Graduate</option>
+              <option value="3">Collage Graduate</option>
+              <option value="4">Vocational</option>
+              <option value="5">Did not attend in school</option>
+              <option value="6">Others(Specify Below)</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>Specify(If you select others)</label>
+          <input type="text" name="father_school_specify" class="input" >
+       </div>  
+       <div class="inputfield">
+          <label>C3. Employnent Status</label>
+          <div class="custom_select">
+            <select name="father_em_type" >
+              <option value="1">Full Time</option>
+              <option value="2">Part Time</option>
+              <option value="3">Self Employed</option>
+              <option value="4">Unemployed due to CQ</option>
+              <option value="5">Not Working</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>C4. Mother's Name (Last/First/Middle Name)</label>
+          <input type="text" name="mother_name" class="input" placeholder="e.g Doe John Berg" >
+       </div>  
+       <div class="inputfield">
+          <label>C5. Highest Educational Affainment</label>
+          <div class="custom_select">
+            <select name="mother_school_type" >
+              <option value="1">Elementary Graduate</option>
+              <option value="2">Highschool Graduate</option>
+              <option value="3">Collage Graduate</option>
+              <option value="4">Vocational</option>
+              <option value="5">Did not attend in school</option>
+              <option value="6">Others(Specify Below)</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>Specify(If you select others)</label>
+          <input type="text" name="mother_school_specify" class="input" >
+       </div>  
+       <div class="inputfield">
+          <label>C6. Employnent Status</label>
+          <div class="custom_select">
+            <select name="mother_em_type" >
+              <option value="1">Full Time</option>
+              <option value="2">Part Time</option>
+              <option value="3">Self Employed</option>
+              <option value="4">Unemployed due to CQ</option>
+              <option value="5">Not Working</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>C7. Guardian's Name (Last/First/Middle Name)</label>
+          <input type="text" name="guardian_name" class="input" placeholder="e.g Doe John Berg" >
+       </div>  
+       <div class="inputfield">
+          <label>C8. Highest Educational Affainment</label>
+          <div class="custom_select">
+            <select name="guardian_school_type" >
+              <option value="1">Elementary Graduate</option>
+              <option value="2">Highschool Graduate</option>
+              <option value="3">Collage Graduate</option>
+              <option value="4">Vocational</option>
+              <option value="5">Did not attend in school</option>
+              <option value="6">Others(Specify Below)</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>Specify(If you select others)</label>
+          <input type="text" name="guardian_school_specify" class="input" >
+       </div>  
+       <div class="inputfield">
+          <label>C9. Employnent Status</label>
+          <div class="custom_select">
+            <select name="guardian_em_type" >
+              <option value="1">Full Time</option>
+              <option value="2">Part Time</option>
+              <option value="3">Self Employed</option>
+              <option value="4">Unemployed due to CQ</option>
+              <option value="5">Not Working</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="father_work" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Is your father work from home?</p>
+       </div> 
+       <div class="inputfield">
+          <label>Father Contact Number</label>
+          <input type="number" name="father_no" class="input" >
+       </div>  
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="mother_work" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Is your mother work from home?</p>
+       </div> 
+       <div class="inputfield">
+          <label>Mother Contact Number</label>
+          <input type="number" name="mother_no" class="input" >
+       </div>  
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="guardian_work">
+            <span class="checkmark"></span>
+          </label>
+          <p>Is your guardian work from home?</p>
+       </div> 
+       <div class="inputfield">
+          <label>Guardian Contact Number</label>
+          <input type="number" name="guardian_no" class="input">
+       </div>  
+       <div class="info"><p>C. Others</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="4ps" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Are you  a 4ps Beneficiary?</p>
+       </div> 
+    </section>
+    
+    
+    <section>
+   	<div class="info"><p>D. Household Capacity & Access to Distance Learning</p></div>
+       <div class="inputfield">
+          <label>D1. How does your child goto school?</label>
+          <div class="custom_select">
+            <select name="going_school" >
+              <option value="walking">Walking</option>
+              <option value="commute">Public Commute</option>
+              <option value="owned">Private Own Vehicle</option>
+            </select>
+          </div>
+       </div> 
+       <div class="info"><p>D2. How many of your household members(Including enrolle) and Studying in 2020-2021 </p></div>
+       <div class="inputfield">
+          <label>Kinder</label>
+          <input type="text" name="kinder" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 1</label>
+          <input type="text" name="grade_1" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 2</label>
+          <input type="text" name="grade_2" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 3</label>
+          <input type="text" name="grade_3" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 4</label>
+          <input type="text" name="grade_4" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 5</label>
+          <input type="text" name="grade_5" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 6</label>
+          <input type="text" name="grade_6" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 7</label>
+          <input type="text" name="grade_7" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 8</label>
+          <input type="text" name="grade_8" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 9</label>
+          <input type="text" name="grade_9" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 10</label>
+          <input type="text" name="grade_10" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 11</label>
+          <input type="text" name="grade_11" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Grade 12</label>
+          <input type="text" name="grade_12" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Other (Specify)</label>
+          <input type="text" name="spec_other_grade" class="input">
+       </div>  
+       <div class="info"><p>D3. Who among the household members can provide instructional support to childe distance learning</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_parent" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Parent/Guardian</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_elder" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Elder/Siblings</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="grandparent" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Grandparents</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ex_mem" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Extended member</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="other_d" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Other</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="independent" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Independent</p>
+       </div> 
+       
+       <div class="info"><p>D4.What devices are available at home that learner can use for learning</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_cable_tv" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Cable TV</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_non_cable_tv" >
+            <span class="checkmark"></span>
+          </label>
+          <p>None Cable TV</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_keypad" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Keypad phone</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_smartphone" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Smartphone</p>
+       </div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_tablets" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Tablets</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_radio" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Radio</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_dc" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Desktop Computer</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_laptop" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Laptop</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="chk_none_gadget" >
+            <span class="checkmark"></span>
+          </label>
+          <p>None</p>
+       </div> 
+       <div class="inputfield">
+          <label>Others (Specify)</label>
+          <input type="text" name="chk_input_gadget" class="input" placeholder="e.g Super Computers">
+       </div>
+       <div class="inputfield">
+          <label>D5. Do you have way to connect to the internet</label>
+          <div class="custom_select">
+            <select name="number_of_d3" >
+              <option value="1">Yes</option>
+              <option value="2">No (Proceed to D7)</option>
+            </select>
+          </div>
+       </div> 
+       <div class="info"><p>D6.How do you connect to the internet</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="int_mob_data" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Mobile data</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="int_broad" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Own Broadband DSL Modem(DSL,Antenna,fibr)</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="int_com_shop" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Computer shop</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="int_other_places" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Other Places(Like mall,Peso Wifi,Internet shop)</p>
+       </div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="int_none" >
+            <span class="checkmark"></span>
+          </label>
+          <p>None</p>
+       </div> 
+       <div class="info"><p>D7. What distance learning modality do you prefer for your child</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ol_learn" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Online Learning</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ol_tv" >
+            <span class="checkmark"></span>
+          </label>
+          <p>TV</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ol_radio" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Radio</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ol_mod_learn" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Modular Learning</p>
+       </div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ol_f2f" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Face to face</p>
+       </div> 
+       <div class="inputfield">
+          <label>Other (Specify)</label>
+          <input type="text" name="ol_other" class="input">
+       </div>
+       
+       <div class="inputfield">
+          <label>A5. Last Grade Level Completed</label>
+          <input type="text" name="last_grade_level" class="input" placeholder="e.g Grade 10">
+       </div>
+       <div class="inputfield">
+          <label>A6. Last School Year Completed </label>
+          <input type="number" name="last_year_completed" class="input" placeholder="e.g 2019">
+       </div>  
+       <div class="inputfield">
+          <label>A7. Last School Attended </label>
+          <input type="text" name="last_school_attended" class="input" placeholder="e.g PNHS">
+       </div>  
+       <div class="inputfield">
+          <label>A8. School ID </label>
+          <input type="number" name="prev_school_id" class="input" placeholder="e.g 304731">
+       </div>  
+       <div class="inputfield">
+          <label>A9. School Address </label>
+          <input type="text" name="school_address" class="input" placeholder="e.g P-22,Pob,Prosperidad,ADS">
+       </div>  
+       <div class="inputfield">
+          <label>A10. School Type</label>
+          <div class="custom_select">
+            <select name="school_type" >
+              <option value="public_school">Public</option>
+              <option value="private_school">Private</option>
+            </select>
+          </div>
+       </div> 
+       <div class="info"><p>D8. What are the challenges that may affect your child learning process through distance learning education</p></div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="lack_gadgets" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Lack of equipment/gadgets</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="slow_net" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Insufficient load/data allowance (Slow internet)</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="ehc" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Existing health condition</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="dif_il" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Difficulty in independent learning</p>
+       </div>
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="conf_activity" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Conflict with other activities</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="lack_space" >
+            <span class="checkmark"></span>
+          </label>
+          <p>No or lack of space studying</p>
+       </div> 
+       <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" value="1" name="destruction" >
+            <span class="checkmark"></span>
+          </label>
+          <p>Destructions(Online Games,Social Media)</p>
+       </div> 
+       <div class="inputfield">
+          <label>Others (Specify)</label>
+          <input type="text" name="other_d8" class="input">
+       </div>
+    </section>
+    
+    <section>
+    	<div class="info_agree"><p>AGREEMENT</p></div>
+    	<div class="info_end"><p>I hereby certify that the above information given are true and correct to the best of my knowledge and I allow the DEPED to use my child's details create and/or update his/her learner profile in the Learner Information System. The information herein shall be treated as confidential in compliance with Data Privacy Act of 2012.</p></div>
+       <div class="inputfield">
+          <label>Parent/Guardian Name</label>
+          <input type="text" name="parent_full_name" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Date</label>
+          <input type="date" name="date_printed" value="2020-06-01" class="input">
+       </div>  
+       
+    </section>
+    
+    <section>
+    	<div class="info_agree"><p>SUBMIT NOW</p></div>
+    	<div class="info_end"><p>Proudly Powered by JersTech Web Solution</p></div>
+    </section>
+       
+       <div class="inputfield buttons">
+        <input type="button" id="next" value="Next Step" class="button btn">
+        <input type="submit" id="submit" value="Submit Now" class="button btn">
+      </div>      
+      <div class="footer"><p>Made with &#10084; by Jerson Carin </p></div>
+      </form>
+    </div>
+</div>	
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+</body>
+</html>
