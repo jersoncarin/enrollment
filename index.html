@@ -1,3 +1,26 @@
+<!--
+MIT License
+
+Copyright (c) 2020 Jerson Carin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +58,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+            <input type='hidden' value='0' name='balik_aral'>
             <input type="checkbox" value="1" name="balik_aral" >
             <span class="checkmark"></span>
           </label>
@@ -112,11 +136,11 @@
        </div> 
        <div class="inputfield">
           <label>B3. Last Name</label>
-          <input type="text" name="last_name" class="input" placeholder="Last name" >
+          <input type="text" name="last_name" class="input" placeholder="Last name" requirex>
        </div>  
        <div class="inputfield">
           <label>B4. First Names</label>
-          <input type="text" name="first_name" class="input" placeholder="First name" >
+          <input type="text" name="first_name" class="input" placeholder="First name" required>
        </div>  
        <div class="inputfield">
           <label>B5. Middle Name (Optional)</label>
@@ -124,20 +148,20 @@
        </div>  
        <div class="inputfield">
           <label>B6. Name Extension (Jr,lll)</label>
-          <input type="text" name="middle_name" class="input" placeholder="Middle name">
+          <input type="text" name="ext_name" class="input" placeholder="Name extension">
        </div>  
        <div class="inputfield">
           <label>B7. Birth Date</label>
-          <input type="date" name="birth_date" value="2003-09-12" class="input" placeholder="e.g 2003-09-12" >
+          <input type="date" name="birth_date" value="2003-09-12" class="input" placeholder="e.g 2003-09-12" required>
        </div>  
        <div class="inputfield">
           <label>B8. Age</label>
-          <input type="number" name="age" class="input" placeholder="Middle name">
+          <input type="number" name="age" class="input" placeholder="Your age" required>
        </div>  
         <div class="inputfield">
           <label>B9. Sex</label>
           <div class="custom_select">
-            <select name="gender_type" >
+            <select name="gender_type" required>
               <option value="">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -146,6 +170,7 @@
        </div> 
          <div class="inputfield terms">
           <label class="check">
+        	<input type="hidden" value="0" name="ip" >
             <input type="checkbox" value="1" name="ip" >
             <span class="checkmark"></span>
           </label>
@@ -163,9 +188,10 @@
           <label>B13. Religion</label>
           <input type="text" name="religion" class="input">
        </div> 
-       <div class="info"><p>B. For Learners with Specia Education Needs</p></div>
+       <div class="info"><p>B. For Learners with Special Education Needs</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="special_edu" >
             <input type="checkbox" value="1" name="special_edu" >
             <span class="checkmark"></span>
           </label>
@@ -177,6 +203,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="special_gadget" >
             <input type="checkbox" value="1" name="special_gadget" >
             <span class="checkmark"></span>
           </label>
@@ -237,7 +264,7 @@
           <input type="text" name="father_school_specify" class="input" >
        </div>  
        <div class="inputfield">
-          <label>C3. Employnent Status</label>
+          <label>C3. Employment Status</label>
           <div class="custom_select">
             <select name="father_em_type" >
               <option value="1">Full Time</option>
@@ -270,7 +297,7 @@
           <input type="text" name="mother_school_specify" class="input" >
        </div>  
        <div class="inputfield">
-          <label>C6. Employnent Status</label>
+          <label>C6. Employment Status</label>
           <div class="custom_select">
             <select name="mother_em_type" >
               <option value="1">Full Time</option>
@@ -303,7 +330,7 @@
           <input type="text" name="guardian_school_specify" class="input" >
        </div>  
        <div class="inputfield">
-          <label>C9. Employnent Status</label>
+          <label>C9. Employment Status</label>
           <div class="custom_select">
             <select name="guardian_em_type" >
               <option value="1">Full Time</option>
@@ -316,6 +343,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="father_work" >
             <input type="checkbox" value="1" name="father_work" >
             <span class="checkmark"></span>
           </label>
@@ -327,6 +355,7 @@
        </div>  
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="mother_work" >
             <input type="checkbox" value="1" name="mother_work" >
             <span class="checkmark"></span>
           </label>
@@ -338,6 +367,7 @@
        </div>  
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="guardian_work" >
             <input type="checkbox" value="1" name="guardian_work">
             <span class="checkmark"></span>
           </label>
@@ -350,6 +380,7 @@
        <div class="info"><p>C. Others</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="4ps" >
             <input type="checkbox" value="1" name="4ps" >
             <span class="checkmark"></span>
           </label>
@@ -430,6 +461,7 @@
        <div class="info"><p>D3. Who among the household members can provide instructional support to childe distance learning</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_parent" >
             <input type="checkbox" value="1" name="chk_parent" >
             <span class="checkmark"></span>
           </label>
@@ -437,6 +469,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_elder" >
             <input type="checkbox" value="1" name="chk_elder" >
             <span class="checkmark"></span>
           </label>
@@ -444,6 +477,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="grandparent" >
             <input type="checkbox" value="1" name="grandparent" >
             <span class="checkmark"></span>
           </label>
@@ -451,6 +485,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ex_mem" >
             <input type="checkbox" value="1" name="ex_mem" >
             <span class="checkmark"></span>
           </label>
@@ -458,6 +493,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="other_d" >
             <input type="checkbox" value="1" name="other_d" >
             <span class="checkmark"></span>
           </label>
@@ -465,6 +501,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="independent" >
             <input type="checkbox" value="1" name="independent" >
             <span class="checkmark"></span>
           </label>
@@ -474,6 +511,7 @@
        <div class="info"><p>D4.What devices are available at home that learner can use for learning</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_cable_tv" >
             <input type="checkbox" value="1" name="chk_cable_tv" >
             <span class="checkmark"></span>
           </label>
@@ -481,6 +519,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_non_cable_tv" >
             <input type="checkbox" value="1" name="chk_non_cable_tv" >
             <span class="checkmark"></span>
           </label>
@@ -488,6 +527,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_keypad" >
             <input type="checkbox" value="1" name="chk_keypad" >
             <span class="checkmark"></span>
           </label>
@@ -495,6 +535,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_smartphone" >
             <input type="checkbox" value="1" name="chk_smartphone" >
             <span class="checkmark"></span>
           </label>
@@ -502,6 +543,7 @@
        </div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_tablets" >
             <input type="checkbox" value="1" name="chk_tablets" >
             <span class="checkmark"></span>
           </label>
@@ -509,6 +551,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_radio" >
             <input type="checkbox" value="1" name="chk_radio" >
             <span class="checkmark"></span>
           </label>
@@ -516,6 +559,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_dc" >
             <input type="checkbox" value="1" name="chk_dc" >
             <span class="checkmark"></span>
           </label>
@@ -523,13 +567,15 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
-            <input type="checkbox" value="1" name="chk_laptop" >
+          	<input type="hidden" value="0" name="chk_laptop" >
+            <input type="checkbox" name="chk_laptop" value="1" >
             <span class="checkmark"></span>
           </label>
           <p>Laptop</p>
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="chk_none_gadget" >
             <input type="checkbox" value="1" name="chk_none_gadget" >
             <span class="checkmark"></span>
           </label>
@@ -551,6 +597,7 @@
        <div class="info"><p>D6.How do you connect to the internet</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="int_mob_data" >
             <input type="checkbox" value="1" name="int_mob_data" >
             <span class="checkmark"></span>
           </label>
@@ -558,6 +605,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="int_broad" >
             <input type="checkbox" value="1" name="int_broad" >
             <span class="checkmark"></span>
           </label>
@@ -565,6 +613,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="int_com_shop" >
             <input type="checkbox" value="1" name="int_com_shop" >
             <span class="checkmark"></span>
           </label>
@@ -572,6 +621,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="int_other_places" >
             <input type="checkbox" value="1" name="int_other_places" >
             <span class="checkmark"></span>
           </label>
@@ -579,6 +629,7 @@
        </div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="int_none" >
             <input type="checkbox" value="1" name="int_none" >
             <span class="checkmark"></span>
           </label>
@@ -587,6 +638,7 @@
        <div class="info"><p>D7. What distance learning modality do you prefer for your child</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ol_learn" >
             <input type="checkbox" value="1" name="ol_learn" >
             <span class="checkmark"></span>
           </label>
@@ -594,6 +646,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ol_tv" >
             <input type="checkbox" value="1" name="ol_tv" >
             <span class="checkmark"></span>
           </label>
@@ -601,6 +654,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ol_radio" >
             <input type="checkbox" value="1" name="ol_radio" >
             <span class="checkmark"></span>
           </label>
@@ -608,6 +662,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ol_mod_learn" >
             <input type="checkbox" value="1" name="ol_mod_learn" >
             <span class="checkmark"></span>
           </label>
@@ -615,6 +670,7 @@
        </div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ol_f2f" >
             <input type="checkbox" value="1" name="ol_f2f" >
             <span class="checkmark"></span>
           </label>
@@ -629,6 +685,7 @@
        <div class="info"><p>D8. What are the challenges that may affect your child learning process through distance learning education</p></div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="lack_gadgets" >
             <input type="checkbox" value="1" name="lack_gadgets" >
             <span class="checkmark"></span>
           </label>
@@ -636,6 +693,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="slow_net" >
             <input type="checkbox" value="1" name="slow_net" >
             <span class="checkmark"></span>
           </label>
@@ -643,6 +701,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="ehc" >
             <input type="checkbox" value="1" name="ehc" >
             <span class="checkmark"></span>
           </label>
@@ -650,6 +709,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="dif_il" >
             <input type="checkbox" value="1" name="dif_il" >
             <span class="checkmark"></span>
           </label>
@@ -657,6 +717,7 @@
        </div>
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="conf_activity" >
             <input type="checkbox" value="1" name="conf_activity" >
             <span class="checkmark"></span>
           </label>
@@ -664,6 +725,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="lack_space" >
             <input type="checkbox" value="1" name="lack_space" >
             <span class="checkmark"></span>
           </label>
@@ -671,6 +733,7 @@
        </div> 
        <div class="inputfield terms">
           <label class="check">
+          	<input type="hidden" value="0" name="destruction" >
             <input type="checkbox" value="1" name="destruction" >
             <span class="checkmark"></span>
           </label>
@@ -702,14 +765,17 @@
     </section>
        
        <div class="inputfield buttons">
-        <input type="button" id="next" value="Next Step" class="button btn">
-        <input type="submit" id="submit" value="Submit Now" class="button btn">
+        <input type="button" id="next" value="Next Step" class="next button btn">
+        <input type="submit" id="submit" name="form" value="Submit Now" class="button btn">
       </div>      
       <div class="footer"><p>Made with &#10084; by Jerson Carin </p></div>
       </form>
     </div>
 </div>	
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="./script.js"></script>
+<script  src="scripts/script.js"></script>
+<script>
+	$(".next").on("click",function(){$(window).scrollTop(0)});
+</script>
 </body>
 </html>
