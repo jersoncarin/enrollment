@@ -27,7 +27,7 @@ SOFTWARE.
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Learner Enrollment and Survey Form</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css?ver=<?php echo time();?>">
 </head>
 <body>
 <div class="wrapper">
@@ -761,7 +761,7 @@ SOFTWARE.
     
     <section>
     	<div class="info_agree"><p>SUBMIT NOW</p></div>
-    	<div class="info_end"><p>Proudly Powered by JersTech Web Solution</p></div>
+    	<div class="info_end"><p>Are you sure want to submit?</p></div>
     </section>
        
        <div class="inputfield buttons">
@@ -773,9 +773,9 @@ SOFTWARE.
     </div>
 </div>	
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="scripts/script.js"></script>
+<script  src="scripts/script.js?ver=<?php echo time();?>"></script>
 <script>
-	$(".next").on("click",function(){$(window).scrollTop(0)});
+	$(".next").on("click",function(){$('html,body').animate({ scrollTop: 0 }, 'slow');});
 </script>
 </body>
 </html>
